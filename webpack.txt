@@ -1,0 +1,16 @@
+npx 会帮你执行依赖包里的二进制文件。
+
+webpack 有默认的配置，如默认的入口文件是 ./src，默认打包到dist/main.js。
+
+
+Babel 是一个 JS 编译器.
+作用：
+	(1)语法转换
+	(2)通过 Polyfill 方式在目标环境中添加缺失的特性(@babel/polyfill模块)
+	(3)源码转换(codemods)
+@babel/core 核心库
+@babel/preset-env 可以根据配置的目标浏览器或者运行环境来自动将ES2015+的代码转换为es5
+@babel/polyfill 模块包括 core-js 和一个自定义的 regenerator runtime 模块，可以模拟完整的 ES2015+ 环境
+@babel/plugin-transform-runtime 是一个可以重复使用 Babel 注入的帮助程序，以节省代码大小的插件，需要和 @babel/runtime 配合使用
+core-js JavaScript 的模块化标准库，包含 Promise、Symbol、Iterator和许多其他的特性，它可以让你仅加载必需的功能。
+@babel/cli CLI命令行工具
